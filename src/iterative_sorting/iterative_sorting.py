@@ -31,10 +31,7 @@ def bubble_sort(arr):
                 arr.remove(arr[next_index])
                 arr.insert(smallest_index, add_item)  
             else:
-                if arr[smallest_index] <= arr[next_index]:
-                    add_item = arr[smallest_index]
-                    arr.remove(arr[smallest_index])
-                    arr.insert(smallest_index, add_item)
+                arr
     print(arr)
     return arr
 
