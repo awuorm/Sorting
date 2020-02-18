@@ -16,16 +16,13 @@ def merge( arrA, arrB ):
                     arrB[itemb],arrB[itemb+1] = arrB[itemb+1],arrB[itemb]
                     sorted  = True
                     merging_arr = arrA + arrB
-                    print(f'the arrays {merging_arr}')
                 elif mergeitem + 1 > len(merging_arr):
                    merging_arr = arrA + arrB
                 else:
                     if merging_arr[mergeitem] >= merging_arr[mergeitem +1]:
                         merging_arr[mergeitem],merging_arr[mergeitem+1] = merging_arr[mergeitem+1],merging_arr[mergeitem]
-                        # print(f"it works {merging_arr}")
                         sorted = True
     merged_arr = merging_arr
-    print(f"{merged_arr}")
         # TO-DO
     return merged_arr
 merge([3,7,6,5],[8,1,4,2])
@@ -36,12 +33,12 @@ def merge_sort( arr ):
     if len(arr) == 0 or len(arr) == 1 :
         return arr
     else:
-        # print(len(arr)//2)
-        # print(arr[0:len(arr)//2],arr[len(arr)//2:len(arr)])
         return merge(arr[0:len(arr)//2],arr[len(arr)//2:len(arr)])
     return arr
 merge_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7])
 merge_sort([0, 1, 2, 3, 4, 5])
+
+
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
     # TO-DO
