@@ -25,10 +25,13 @@ selection_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7])
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
+    sorted = True
     if len(arr) == 0:
         return arr
     else:
-        while  len(arr) != 0 and arr[0] != min(arr) and arr[len(arr) - 1] != max(arr) or arr[0] == min(arr) and arr[len(arr) - 1] != max(arr) or arr[0] != min(arr) and arr[len(arr) - 1] == max(arr):
+        while  sorted:
+            sorted = False
+        # len(arr) != 0 and arr[0] != min(arr) and arr[len(arr) - 1] != max(arr) or arr[0] == min(arr) and arr[len(arr) - 1] != max(arr) or arr[0] != min(arr) and arr[len(arr) - 1] == max(arr):
             for i in range(0, len(arr) - 1):
                 cur_index = i
                 smallest_index = cur_index
@@ -37,6 +40,7 @@ def bubble_sort(arr):
                     add_item = arr[next_index]
                     arr.remove(arr[next_index])
                     arr.insert(smallest_index, add_item)
+                    sorted = True
         print(arr)
         return arr
 bubble_sort([25, 67, 4, 33, 19, 40, 190, 200, 1])
